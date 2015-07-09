@@ -2,13 +2,13 @@
 
 cd  /home/kalim/git/minify/
 
-for file in `find -name "*.js"`
+for file in `find /home/kalim/git/minify/ -name "*.js"`
 do
 echo "Compressing $file …"
 java -jar /home/kalim/min.jar --type js -o "${file%%.*}-min.js" "$file"
 done
 
-for file in `find  -name "*.css"`
+for file in `find /home/kalim/git/minify/ -name "*.css"`
 do
 echo "Compressing $file …"
 java -jar /home/kalim/min.jar --type css -o "${file%%.*}-min.css" "$file"
