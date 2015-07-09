@@ -18,5 +18,9 @@ done
 find /home/kalim/git/minify/*  -type f -name "*-min.css"  -print0 | xargs -0 chmod 755
 find /home/kalim/git/minify/*  -type f -name "*-min.js"  -print0 | xargs -0 chmod 755
 
+git add .
+git commit -m "latest minification files"
+git push origin
+
 exit 0
 
